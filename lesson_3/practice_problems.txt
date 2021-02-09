@@ -1,0 +1,146 @@
+EASY 1
+Question 1. 
+1
+2
+2
+3
+
+Question 2. 
+ ! is used to negate or as a bang operator ? is used to  check if certain conditions are met
+1. meaning is not equal to, when checking for a condition of is not equal to
+2. negates truthines
+3. signals it is mutating the caller
+4. not sure
+5. checks if condition is true
+6. returns true
+
+Queestion 3.
+advice = "Few things in life are as important as house training your pet dinosaur."
+advice=advice.split
+advice= advice.each do |value, idx| 
+              if value == "important"
+                advice[idx]= "urgent"
+              end
+        end
+puts advice.join(" ")
+
+Question 4. the first one deletes at index 1 the second deletes if item ==1
+
+Question 5. (10..100).to_a.include?(42)
+
+Question 6. famous_words.prepend("Four score ") 
+            fmaous_words+ "Four score " + famous_words
+
+Question 7. ["Fred", "Wilma", ["Barney", "Betty"], ["BamBam", "Pebbles"]].flatten!
+
+Question 8. flintstones=flintstones.select {|k, v|  k == "Barney" }
+                        
+                    
+            flintstones = flintstones.flatten!
+            
+EASY 2
+
+Question 1. ages.has_key?("Spot")
+
+Question 2 munsters_description = "The Munsters are creepy in a good way."
+          1. munsters_description.swapcase!
+          2. munsters_description.capitalize!
+          3. munsters_description.downcase!
+          4. munsters_description.upcase!
+
+Question 3. ages.merge!(additional_ages)
+
+Question 4. advice.include? "Dino"
+
+Question 5. flintstones= %w(Fred Barney Wilma Betty BamBam Pebbles)
+
+Question 6. flintstones.push("Dino")
+
+Question 7. flintstones.insert(6, "Dino, Hoppy)
+
+Question 8. advice.slice!("Few things in life are as important as ")
+
+Question 9. statement.chars.select{|x| x=="t"}.size
+
+Question 10. title.center(40)
+
+
+MEDIUM 1
+
+Question 1. 10.times{|x| puts "The Flintstones Rock!".rjust(x+("The Flintstones Rock!".size))}
+
+Question 2. no conversion of integer into string
+            puts "the value of 40 + 2 is #{40 + 2}"
+            puts "the value of 40 + 2 is " + (40 + 2).to_s
+
+Question 3. def factors(number)
+          divisor = number
+          factors = []
+          while divisor>=1 
+            factors << number / divisor if number % divisor == 0
+            divisor -= 1
+          end 
+          factors
+        end
+
+Question 4. << modifies the existing array, whereas + returns a new one
+
+Question 5. def fib(first_num, second_num, limit)
+             while first_num + second_num < limit
+                sum = first_num + second_num
+                first_num = second_num
+                second_num = sum
+              end
+              sum
+            end
+            
+Question 6. 34
+
+Question 7. yes
+
+question 8.paper
+
+Question 9. no
+
+MEDIUM 2
+
+1. LONG
+2. LONG
+3. my_string= "pumpkins"
+  my_array = ['pumpkins", "rutabaga"]
+4. my_string = pumpkinsrutabage
+  my_array ["pumpkins"]
+5....
+6...
+
+HARD 1 
+
+1. nil
+2. hi there
+3. a . one, two, three
+  b. one, two three
+  c. two three, one
+
+4. def is_an_ip_number?(num)
+  num >= 0 && num <= 255
+end
+
+def dot_separated_ip_address?(input_string)
+  if input_string.count(".") == 3
+    dot_separated_words = input_string.split(".")
+    ip_or_not = dot_separated_words.map do |x| 
+      is_an_ip_number?(x.to_i)
+    end
+   if ip_or_not.include?(false)
+      false
+   else
+    true
+    end
+  else
+    false
+  end
+end
+
+puts dot_separated_ip_address?("10.4.5.11")
+
+
