@@ -1,0 +1,17 @@
+def prompt(str)
+  str.prepend("==> ")
+  puts str
+end
+
+prompt("Enter the first number")
+num_1 = gets.chomp.to_i
+
+prompt("Enter the second number")
+num_2 = gets.chomp.to_i
+
+puts "#{num_1} + #{num_2} = #{num_1 + num_2}"
+puts "#{num_1} - #{num_2} = #{num_1 - num_2}"
+puts "#{num_1} * #{num_2} = #{num_1 * num_2}"
+puts "#{num_1} / #{num_2} = #{num_1 / num_2}"
+puts "#{num_1} % #{num_2} = #{num_1 % num_2}"
+puts "#{num_1} ** #{num_2} = #{num_1 ** num_2}"
